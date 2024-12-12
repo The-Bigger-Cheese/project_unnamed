@@ -1,8 +1,6 @@
 import time, random, csv
 import fn
 
-characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-
 save_key = ""
 player_type = 69
 
@@ -24,9 +22,10 @@ player_type = int(player_type)
 if player_type == 1:
     while True:
         try:
-            save_key = ''.join(random.choices(characters, k=11))
+            fn.printy("Choose a Save Key:")
+            save_key = input("> ")
             open(f"data_{save_key}.txt")
-            fn.printy("Ok, what the actual hell??? Somehow, there's already a Save File ON THIS DEVICE with exactly the same Save Key. Let's get you a different one.")
+            fn.printy("This Save Key already exists. Pick a different one.")
         except FileNotFoundError:
             break
     with open("active_save.txt", "w") as active:
@@ -59,6 +58,14 @@ if player_type == 1:
         fn.printy("What are these creatures? Why is all of this happening?")
         fn.printy("You think it's about time you went out into the field, in hopes of finding an answer to all of this.")
         fn.printy("Luckily, you happen to have a spare empty journal lying around, enabling you to document any findings.")
+
+    try:
+        with open(f"data_{save_key}.txt", "a") as data:
+            data.write(f"\n{fake_name}")
+
+    except NameError:
+        with open(f"data_{save_key}.txt", "a") as data:
+            data.write(f"\npenisface")
 
 elif player_type == 2:
     while True:
