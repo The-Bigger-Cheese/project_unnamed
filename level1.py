@@ -53,8 +53,9 @@ pl_def_multi = float(save_data[13])
 pl_spd_multi = float(save_data[14])
 
 completed = False
-chest1_opened = False
-chest2_opened = False
+chest1Opened = False
+chest2Opened = False
+gremlinDefeated = False
 
 fn.printy("\n")
 fn.printy("LEVEL: I")
@@ -99,9 +100,10 @@ while not completed:
                 if pos_z != 6:
                     fn.printy("You move forwards through the Forest.")
 
-                if pos_z == 3:
+                if pos_z == 3 and not gremlinDefeated:
                     fn.printy("A Creature jumps out at you!")
                     fn.battle(save_key, "ID-A01/i")
+                    gremlinDefeated = True
 
                 elif pos_z == 6:
                     fn.printy("You enter the Tower.")
@@ -113,10 +115,12 @@ while not completed:
                     fn.printy("You enter the Tower.")
         
         else:
-            fn.printy("You cannot go North any further")
+            fn.printy("The river is blocking the way North.")
 
     elif choice == 2:
-        if pos_z > 0 and pos_y == 0:
+        if pos_z == 5:
+            fn.printy("The river is blocking the way South.")
+        elif pos_z > 0 and pos_y == 0:
             fn.printy("You move backwards towards where you came from.")
             pos_z -= 1
         
@@ -145,7 +149,7 @@ while not completed:
             inventory.append("Boat")
 
         elif pos_z == 6 and pos_y == 1:
-            if not chest1_opened:
+            if not chest1Opened:
                 fn.printy("A Chest! Open it? (Y/N)")
                 open_chest = input("> ")
                 while open_chest.upper() not in ["Y", "N", "YES", "NO"]:
@@ -153,7 +157,7 @@ while not completed:
                     open_chest = input("> ")
 
                 if open_chest.upper() in ["Y", "YES"]:
-                    chest1_opened = True
+                    chest1Opened = True
                     fn.printy("You decide to open the Chest, and gain 50 Chits!")
                     chits += 50
                     fn.stats.update(save_key, chits = chits)
@@ -165,7 +169,7 @@ while not completed:
                 fn.printy("A Chest! You have already opened it.")
                 
         elif pos_z == 6 and pos_y == 2:
-            if not chest2_opened:
+            if not chest2Opened:
                 fn.printy("A Chest! Open it? (Y/N)")
                 open_chest = input("> ")
                 while open_chest.upper() not in ["Y", "N", "YES", "NO"]:
@@ -173,7 +177,7 @@ while not completed:
                     open_chest = input("> ")
 
                 if open_chest.upper() in ["Y", "YES"]:
-                    chest2_opened = True
+                    chest2Opened = True
                     fn.printy("You decide to open the Chest, and a monster jumps out!")
                     fn.battle(save_key, "ID-A02/i")
                 
@@ -202,6 +206,12 @@ while not completed:
                                 fn.printy("The Boat takes you directly across the river!")
                                 pos_z += 1
                                 fn.printy("You see a large, rather imposing Tower in front of you.")
+
+                            elif pos_z == 5:
+                                fn.printy("You deploy the Boat onto the river.")
+                                fn.printy("You enter the Boat.")
+                                fn.printy("The Boat takes you directly across the river... again.")
+                                fn.printy("This seems a bit pointless.")
 
                             else:
                                 fn.printy("You deploy the Boat onto the ground.")
