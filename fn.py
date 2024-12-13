@@ -186,6 +186,7 @@ def battle(save_key, en_id, isBoss = False):
                     if pl_hp > pl_max_hp:
                         pl_hp = pl_max_hp
                     printy(f"You convert {hl} MP to {hl} HP.")
+                    mp -= hl
 
                 else:
                     printy(f"You attempt to convert {hl} MP to {hl} HP, but fail due to insufficient MP.")
@@ -235,7 +236,9 @@ def battle(save_key, en_id, isBoss = False):
         pl_lvl += 1
         printy(f"Level Up! You are now Level {pl_lvl}.")
         pl_max_hp = pl_lvl * 10
+        pl_hp = pl_max_hp
         max_mp = pl_max_hp
+        mp = max_mp
         pl_atk_base = pl_max_hp / 2
         pl_atk_base = round(pl_atk_base, 0)
         pl_atk_base = int(pl_atk_base)
@@ -246,4 +249,4 @@ def battle(save_key, en_id, isBoss = False):
         pl_spd_base = round(pl_spd_base, 0)
         pl_spd_base = int(pl_spd_base)
     
-    stats.update(save_key, xp = xp, lvl = pl_lvl, hp = pl_hp, max_hp = pl_max_hp, max_mp = max_mp, atk_base = pl_atk_base, def_base = pl_def_base, spd_base = pl_spd_base)
+    stats.update(save_key, xp = xp, lvl = pl_lvl, hp = pl_hp, max_hp = pl_max_hp, mp = mp, max_mp = max_mp, atk_base = pl_atk_base, def_base = pl_def_base, spd_base = pl_spd_base)
