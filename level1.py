@@ -57,8 +57,7 @@ chest1Opened = False
 chest2Opened = False
 gremlinDefeated = False
 
-fn.printy("\n")
-fn.printy("LEVEL: I")
+fn.printy("\n\n\n\nLEVEL: I")
 time.sleep(1)
 fn.printy("THE BEGINNING")
 
@@ -68,8 +67,9 @@ pos_z = 0
 inventory = []
 
 fn.printy("You enter the very long and thin Forest just outside your House.")
+
 while not completed:
-    fn.printy("\nWhat will you do now?")
+    fn.printy("\n\n\nWhat will you do now?")
     fn.printy("<=1: Go North")
     fn.printy("==2: Go South")
     fn.printy("==3: Go East")

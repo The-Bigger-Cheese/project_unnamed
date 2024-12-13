@@ -121,12 +121,12 @@ def battle(save_key, en_id, isBoss = False):
     en_spd_full = int(en_stats[7])
     en_spd = en_spd_full
 
-    print("+-----INITIATING BATTLE-----+")
+    print("\n\n+-----INITIATING BATTLE-----+")
     printy("ENEMY:")
     printy(f"{en_id}: {en_name} - {en_hp} HP")    
     while pl_hp > 0 and en_hp > 0:
         if pl_spd > en_spd:
-            printy("YOUR TURN")
+            printy("\nYOUR TURN")
             printy(f"HP: {pl_hp}")
             printy(f"MP: {mp}")
             printy(f"Enemy HP: {en_hp}")
@@ -193,7 +193,7 @@ def battle(save_key, en_id, isBoss = False):
             pl_spd -= en_spd_full
 
         else:
-            printy("ENEMY'S TURN")
+            printy("\nENEMY'S TURN")
             if en_hp >= en_max_hp / 4 and isBoss:
                 en_action = random.randint(1,3)
                 if en_action == 1:

@@ -19,12 +19,12 @@ with open("active_save.txt", "r") as active:
     pl_def_multi = float(save_data[13])
     pl_spd_multi = float(save_data[14])
 
-fn.printy("welcome to my shop, what can i do for you today?")         
+fn.printy("\n\n\nwelcome to my shop, what can i do for you today?")         
 while True:
     atk_upg_cost = int(round(((1.5 ** ((pl_atk_multi -1) * 100) + 10)), 0))
     def_upg_cost = int(round(((1.5 ** ((pl_def_multi -1) * 100) + 10)), 0))
     spd_upg_cost = int(round(((1.5 ** ((pl_spd_multi -1) * 100) + 10)), 0))  
-    fn.printy(f"<=1: upgrade attack - {atk_upg_cost}C")
+    fn.printy(f"\n\n<=1: upgrade attack - {atk_upg_cost}C")
     fn.printy(f"==2: upgrade defence - {def_upg_cost}C")
     fn.printy(f"==3: upgrade speed - {spd_upg_cost}C")
     fn.printy(">=4: Leave")
