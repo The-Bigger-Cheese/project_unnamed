@@ -242,7 +242,7 @@ def battle(save_key, en_id, isBoss = False):
         pl_def_base = pl_max_hp / 2
         pl_def_base = round(pl_def_base, 0)
         pl_def_base = int(pl_def_base)
-        pl_spd_base = pl_max_hp
+        pl_spd_base = pl_max_hp / 2
         pl_spd_base = round(pl_spd_base, 0)
         pl_spd_base = int(pl_spd_base)
     

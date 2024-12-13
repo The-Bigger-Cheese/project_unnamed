@@ -1,4 +1,4 @@
 ID,Name,Description,LVL,HP,ATK,DEF,SPD
 ID-A01/i,Gremlin,"This creature is slightly round in appearance, sporting a relatively thin layer of dark green fur and a large pair of almost perfectly triangular ears.",1,10,5,5,5
-ID-A02/i,Earth Dragon Moth,"This creature takes the appearance of a large red moth, with a few dragonfly-like features. It possesses four powerful wings, capable of taking it to almost ludicrous speeds. It's lucky there's just the one.",1,5,2,2,20
+ID-A02/i,Dragon Moth,"This creature takes the appearance of a large red moth, with a few dragonfly-like features. It possesses four powerful wings, capable of taking it to almost ludicrous speeds. It's lucky there's just the one.",1,5,1,2,20
 ID-A03/i,Hydrogen Dragon,"This creature is... well. It's a dragon. That tells you most of what you need to know. It has ridiculously large ears, giving it almost unnaturally refined hearing abilities. Its colour perfectly embodies the element of Hydrogen.",1,50,5,10,5

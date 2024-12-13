@@ -158,7 +158,7 @@ while True:
                 fn.printy("Please input a number shown above.")
                 selected_level = input("> ")
         
-        exec(open(f"level{selected_level}.py").read())
+        exec(open(f"level{selected_level}.py", encoding = "utf8").read())
 
     elif choice == 1:
         exec(open("shop.py").read())
