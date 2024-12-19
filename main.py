@@ -99,18 +99,18 @@ while True:
 
     fn.printy("Your stats:")
     time.sleep(0.5)
-    fn.printy(f"Level: {pl_lvl}")
+    print(f"Level: {pl_lvl}")
     time.sleep(0.5)
-    fn.printy(f"You need {xp_req - xp} more XP to reach Level {pl_lvl + 1}.")
-    fn.printy(f"HP: {pl_hp} / {pl_max_hp}")
+    print(f"You need {xp_req - xp} more XP to reach Level {pl_lvl + 1}.")
+    print(f"HP: {pl_hp} / {pl_max_hp}")
     time.sleep(0.5)
-    fn.printy(f"MP: {mp} / {max_mp}")
+    print(f"MP: {mp} / {max_mp}")
     time.sleep(0.5)
-    fn.printy(f"Attack: {pl_atk}")
+    print(f"Attack: {pl_atk}")
     time.sleep(0.5)
-    fn.printy(f"Defence: {pl_def}")
+    print(f"Defence: {pl_def}")
     time.sleep(0.5)
-    fn.printy(f"Speed: {pl_spd}")
+    print(f"Speed: {pl_spd}")
     time.sleep(0.5)
 
     with open("levels.csv") as levels:
@@ -128,11 +128,11 @@ while True:
                 break
 
     fn.printy("What will you do?")
-    fn.printy("<=0: Set off")
-    fn.printy("==1: Shop")
-    fn.printy("==2: Journal")
-    fn.printy("==3: Lab")
-    fn.printy(">=4: Gamble away your life savings")
+    print("<=0: Set off")
+    print("==1: Shop")
+    print("==2: Journal")
+    print("==3: Lab")
+    print(">=4: Gamble away your life savings")
     choice = input("> ")
     while not choice.isdigit():
         fn.printy("Enter a number from 0 to 4.")

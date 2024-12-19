@@ -127,14 +127,14 @@ def battle(save_key, en_id, isBoss = False):
     while pl_hp > 0 and en_hp > 0:
         if pl_spd > en_spd:
             printy("\nYOUR TURN")
-            printy(f"HP: {pl_hp}")
-            printy(f"MP: {mp}")
-            printy(f"Enemy HP: {en_hp}")
+            print(f"HP: {pl_hp}")
+            print(f"MP: {mp}")
+            print(f"Enemy HP: {en_hp}")
             printy("What will you do?")
-            printy("<=1: Attack")
-            printy("==2: Examine")
-            printy("==3: Capture")
-            printy(">=4: Heal Self")
+            print("<=1: Attack")
+            print("==2: Examine")
+            print("==3: Capture")
+            print(">=4: Heal Self")
             move = input("> ")
             while not move.isdigit():
                 printy("ERROR: Input must be an integer.")
