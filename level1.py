@@ -70,12 +70,12 @@ fn.printy("You enter the very long and thin Forest just outside your House.")
 
 while not completed:
     fn.printy("\n\n\nWhat will you do now?")
-    fn.printy("<=1: Go North")
-    fn.printy("==2: Go South")
-    fn.printy("==3: Go East")
-    fn.printy("==4: Go West")
-    fn.printy("==5: Search current Location")
-    fn.printy(">=6: Use Item")
+    print("<=1: Go North")
+    print("==2: Go South")
+    print("==3: Go East")
+    print("==4: Go West")
+    print("==5: Search current Location")
+    print(">=6: Use Item")
     if pos_z == 6:
         fn.printy("Use North and South to Ascend or Descend the Tower.")
     choice = input("> ")
