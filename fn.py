@@ -157,9 +157,13 @@ def battle(save_key, en_id, isBoss = False):
             elif move == 2:
                 printy(f"{en_id}: {en_desc}")
                 en_name = en_stats[1]
-                printy(f"You decide to document the entity in your Journal under the name of {en_name}.")
-                journal = open(f"journal_{save_key}.txt", "a")
-                journal.write(f"\n{en_id}")
+                with open(f"journal_{save_key}.txt", "r") as journal:
+                    if en_id not in journal.readlines():
+                        with open(f"journal_{save_key}.txt", "a") as journal:
+                            journal.write(f"\n{en_id}")
+                            printy(f"You decide to document the entity in your Journal under the name of {en_name}.")
+                    else:
+                        printy("You have already written a Journal entry on this Entity.")
             
             elif move == 3:
                 capchance = random.randint(1, en_hp)

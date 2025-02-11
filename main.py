@@ -162,3 +162,6 @@ while True:
 
     elif choice == 1:
         exec(open("shop.py").read())
+
+    elif choice == 2:
+        exec(open("journal.py").read())
