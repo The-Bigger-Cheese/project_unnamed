@@ -1,0 +1,11 @@
+[
+    {
+        "name":"air",
+        "strengths":[
+            "plant"
+        ],
+        "weaknesses":[
+            "earth"
+        ]
+    }
+]

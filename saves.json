@@ -1,0 +1,46 @@
+[
+    {
+        "key":"test",
+        "name":"AZAL_34",
+        "elements":[
+            "creator"
+        ],
+        "lvl":7777777,
+        "xp":7777777,
+        "xp_req":7777777,
+        "chits":7777777,
+        "levels_cleared":7777777,
+        "hp":7777777,
+        "max_hp":7777777,
+        "mp":7777777,
+        "max_mp":7777777,
+        "atk":7777777,
+        "def":7777777,
+        "spd":7777777,
+        "mag":7777777,
+        "mdf":7777777,
+        "moves":[
+            {
+                "value":0,
+                "name":"Assault"
+            },
+            {
+                "value":1,
+                "name":"Full Heal"
+            },
+            {
+                "value":2,
+                "name":"Win"
+            }
+        ],
+        "inventory":[
+
+        ],
+        "journal":[
+
+        ],
+        "lab":[
+            
+        ]
+    }
+]

@@ -1,4 +1,4 @@
-# project_unnamed
+# PROJECT_UNNAMED
 
 how to change your Save Key:
 1. rename the `data_{save_key}` file to include your desired Save Key.

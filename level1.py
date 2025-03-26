@@ -35,6 +35,7 @@ import fn
 
 with open("active_save.txt", "r") as active:
     save_key = active.readline()
+    
 save_data = fn.stats.get(save_key)
 pl_lvl = int(save_data[1])
 pl_hp = int(save_data[2])

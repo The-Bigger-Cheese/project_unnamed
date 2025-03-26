@@ -1,0 +1,58 @@
+[
+    {
+        "name":"Assault",
+        "type":"physical",
+        "base_dmg":1,
+        "effects":[
+
+        ],
+        "element":"none"
+    },
+    {
+        "name":"Heal",
+        "type":"magical",
+        "base_dmg":0,
+        "effects":[
+            {
+                "effect":"heal",
+                "target":"self",
+                "chance":100
+            }
+        ],
+        "element":"none"
+    },
+    {
+        "name":"Swarm",
+        "type":"magical",
+        "base_dmg":0,
+        "effects":[
+            {
+                "effect":"swarm",
+                "target":"self",
+                "chance":100
+            }
+        ],
+        "element":"none"
+    },
+    {
+        "name":"Air Burst",
+        "type":"magical",
+        "base_dmg":1.5,
+        "effects":[
+
+        ],
+        "element":"air"
+    },
+    {
+        "name":"Roar",
+        "type":"physical",
+        "base_dmg":0.75,
+        "effects":[
+            {
+                "effect":"stun",
+                "target":"opp",
+                "chance":50
+            }
+        ]
+    }
+]

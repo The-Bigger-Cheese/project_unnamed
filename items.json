@@ -1,0 +1,10 @@
+[
+    {
+        "name":"Boat",
+        "type":"solution",
+        "solves":[
+            "river",
+            "ocean"
+        ]
+    }
+]

@@ -1,4 +1,4 @@
-import sys, time, random, csv
+import sys, time, random, pandas as pd, csv
 
 def printy(txt, delay = 0.02, delay1 = 0.25, delay2 = 0.5, end = "\n"):
     for char in txt:
@@ -68,8 +68,10 @@ class stats:
                 data.writelines(pl_stats[1:])
 
     def get(save_key):
-        with open(f"data_{save_key}.txt", "r") as data:
-            return data.readlines()
+        alldata = pd.DataFrame(pd.read_json("saves.json"))
+        for save in alldata:
+            if save["key"] == save_key:
+                return save
 
 def battle(save_key, en_id, isBoss = False):
 
