@@ -1,4 +1,4 @@
-import sys, time, random, pandas as pd, csv
+import sys, time, random, pandas as pd, csv, json
 
 def printy(txt, delay = 0.02, delay1 = 0.25, delay2 = 0.5, end = "\n"):
     for char in txt:
@@ -14,6 +14,25 @@ def printy(txt, delay = 0.02, delay1 = 0.25, delay2 = 0.5, end = "\n"):
 
     sys.stdout.write(end)
     sys.stdout.flush()
+
+class enemy:
+
+    def __init__(self, id, lvl):
+        with json.load("data\\entities.json", "r") as en_all:
+            for dict in en_all:
+                if dict["id"] == id:
+                    en_one = dict
+                    break
+
+        self.id = id
+        self.name = en_one["name"]
+        self.type = en_one["type"]
+        self.elements = en_one["elements"]
+        self.desc = en_one["desc"]
+        self.lvl = lvl
+        self.hp = en_one["hp"]
+        self.max_hp = en_one["hp"]
+        self
 
 class stats:
 

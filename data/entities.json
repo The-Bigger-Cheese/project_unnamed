@@ -28,9 +28,6 @@
         "mdf":5,
         "mdf_incrate":0,
         "mdf_inctype":"+",
-        "xp_req":10,
-        "xpreq_incrate":15,
-        "xpreq_inctype":"+",
         "moves":[
             {
                 "name":"Assault",
@@ -76,10 +73,7 @@
         ],
         "elements":[
             "air"
-        ],
-        "xp_req":10,
-        "xpreq_incrate":2,
-        "xpreq_inctype":"*"
+        ]
     },
     {
         "id":"ID-A03/i",
@@ -87,18 +81,25 @@
         "desc":"This creature is... well. It's a dragon. That tells you most of what you need to know. It has ridiculously large ears, giving it almost unnaturally refined hearing abilities. Its colour perfectly embodies the element of Hydrogen.",
         "hp":50,
         "hp_incrate":15,
+        "hp_inctype":"+",
         "mp":20,
         "mp_incrate":10,
+        "mp_inctype":"+",
         "atk":5,
         "atk_incrate":10,
+        "atk_inctype":"+",
         "def":10,
         "def_incrate":15,
+        "def_inctype":"+",
         "spd":5,
         "spd_incrate":5,
+        "spd_inctype":"+",
         "mag":10,
-        "mag_incrate":10,
+        "mag_incrate":1.1,
+        "mag_inctype":"*",
         "mdf":15,
-        "mdf_incrate":12,
+        "mdf_incrate":1.1,
+        "mdf_inctype":"*",
         "moves":[
             {
                 "name":"Assault",
